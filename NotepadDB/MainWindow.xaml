@@ -1,0 +1,18 @@
+﻿<Window x:Class="NotepadDB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NotepadDB"
+        mc:Ignorable="d"
+        Title="NotepadDB" Height="550" Width="925">
+    <DockPanel  >
+        <WrapPanel DockPanel.Dock="Top">
+            <Button Margin="10" Height="20" Width="70" Name="btnSave" Click="btnSave_Click" Content="Save"/>
+            <Button Margin="10" Height="20" Width="70" Name="btnOpen" Click="btnOpen_Click" Content="Open"/>
+            <ComboBox Margin="10" Name="cmbFontSize" Width="50" IsEditable="True" TextBoxBase.TextChanged="cmbFontSize_TextChanged" />
+        </WrapPanel>
+        <TextBox Name="MainTextBox" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" Margin="10" Text="{Binding Contents}">
+            </TextBox>
+    </DockPanel>
+</Window>
